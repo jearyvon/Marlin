@@ -90,15 +90,15 @@
     #define X_MIN_PIN                          3
   #endif
   #ifndef X_MAX_PIN
-    #define X_MAX_PIN                          2
+    #define X_MAX_PIN                         43
   #endif
 #endif
 #ifndef Y_STOP_PIN
   #ifndef Y_MIN_PIN
-    #define Y_MIN_PIN                         14
+    #define Y_MIN_PIN                         42
   #endif
   #ifndef Y_MAX_PIN
-    #define Y_MAX_PIN                         15
+    #define Y_MAX_PIN                         43
   #endif
 #endif
 #ifndef Z_STOP_PIN
@@ -106,10 +106,9 @@
     #define Z_MIN_PIN                         18
   #endif
   #ifndef Z_MAX_PIN
-    #define Z_MAX_PIN                         19
+    #define Z_MAX_PIN                         19 //此管脚用作耗材检测
   #endif
 #endif
-
 //
 // Z Probe (when not Z_MIN_PIN)
 //
@@ -325,91 +324,38 @@
   //
 
   #ifndef X_SERIAL_TX_PIN
-    #define X_SERIAL_TX_PIN                   40
+    #define X_SERIAL_TX_PIN                   4
   #endif
   #ifndef X_SERIAL_RX_PIN
-    #define X_SERIAL_RX_PIN                   63
-  #endif
-  #ifndef X2_SERIAL_TX_PIN
-    #define X2_SERIAL_TX_PIN                  -1
-  #endif
-  #ifndef X2_SERIAL_RX_PIN
-    #define X2_SERIAL_RX_PIN                  -1
+    #define X_SERIAL_RX_PIN                   38
   #endif
 
   #ifndef Y_SERIAL_TX_PIN
-    #define Y_SERIAL_TX_PIN                   59
+    #define Y_SERIAL_TX_PIN                   5
   #endif
   #ifndef Y_SERIAL_RX_PIN
-    #define Y_SERIAL_RX_PIN                   64
-  #endif
-  #ifndef Y2_SERIAL_TX_PIN
-    #define Y2_SERIAL_TX_PIN                  -1
-  #endif
-  #ifndef Y2_SERIAL_RX_PIN
-    #define Y2_SERIAL_RX_PIN                  -1
+    #define Y_SERIAL_RX_PIN                   56
   #endif
 
   #ifndef Z_SERIAL_TX_PIN
-    #define Z_SERIAL_TX_PIN                   42
+    #define Z_SERIAL_TX_PIN                   6
   #endif
   #ifndef Z_SERIAL_RX_PIN
-    #define Z_SERIAL_RX_PIN                   65
+    #define Z_SERIAL_RX_PIN                   62
   #endif
+
   #ifndef Z2_SERIAL_TX_PIN
-    #define Z2_SERIAL_TX_PIN                  -1
+    #define Z2_SERIAL_TX_PIN                   12
   #endif
   #ifndef Z2_SERIAL_RX_PIN
-    #define Z2_SERIAL_RX_PIN                  -1
+    #define Z2_SERIAL_RX_PIN                   30
   #endif
 
   #ifndef E0_SERIAL_TX_PIN
-    #define E0_SERIAL_TX_PIN                  44
+    #define E0_SERIAL_TX_PIN                  11
   #endif
   #ifndef E0_SERIAL_RX_PIN
-    #define E0_SERIAL_RX_PIN                  66
-  #endif
-  #ifndef E1_SERIAL_TX_PIN
-    #define E1_SERIAL_TX_PIN                  -1
-  #endif
-  #ifndef E1_SERIAL_RX_PIN
-    #define E1_SERIAL_RX_PIN                  -1
-  #endif
-  #ifndef E2_SERIAL_TX_PIN
-    #define E2_SERIAL_TX_PIN                  -1
-  #endif
-  #ifndef E2_SERIAL_RX_PIN
-    #define E2_SERIAL_RX_PIN                  -1
-  #endif
-  #ifndef E3_SERIAL_TX_PIN
-    #define E3_SERIAL_TX_PIN                  -1
-  #endif
-  #ifndef E3_SERIAL_RX_PIN
-    #define E3_SERIAL_RX_PIN                  -1
-  #endif
-  #ifndef E4_SERIAL_TX_PIN
-    #define E4_SERIAL_TX_PIN                  -1
-  #endif
-  #ifndef E4_SERIAL_RX_PIN
-    #define E4_SERIAL_RX_PIN                  -1
-  #endif
-  #ifndef E5_SERIAL_TX_PIN
-    #define E5_SERIAL_TX_PIN                  -1
-  #endif
-  #ifndef E5_SERIAL_RX_PIN
-    #define E5_SERIAL_RX_PIN                  -1
-  #endif
-  #ifndef E6_SERIAL_TX_PIN
-    #define E6_SERIAL_TX_PIN                  -1
-  #endif
-  #ifndef E6_SERIAL_RX_PIN
-    #define E6_SERIAL_RX_PIN                  -1
-  #endif
-  #ifndef E7_SERIAL_TX_PIN
-    #define E7_SERIAL_TX_PIN                  -1
-  #endif
-  #ifndef E7_SERIAL_RX_PIN
-    #define E7_SERIAL_RX_PIN                  -1
+    #define E0_SERIAL_RX_PIN                  24
   #endif
 #endif
 
@@ -488,7 +434,7 @@
       #else
         #define LCD_PINS_RS                   16
         #define LCD_PINS_ENABLE               17
-        #define LCD_PINS_D4                   23
+        #define LCD_PINS_D4                    23
         #define LCD_PINS_D5                   25
         #define LCD_PINS_D6                   27
       #endif
